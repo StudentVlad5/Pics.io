@@ -4,6 +4,7 @@
   "private": true,
   "description": "testing",
   "main": "index.js",
+  "proxy": "http://127.0.0.1:5000/",
   "scripts": {
     "start": "node index.js",
     "server": "nodemon index.js --ignore client",

@@ -9,7 +9,7 @@ export const Task = ({ task }) => {
 
   const handleDelete = () => {
     axios
-      .delete("http://pics-io.vercel.app/api/message/delete", {
+      .delete("/api/message/delete", {
         data: {
           id: task.id,
         },
@@ -28,7 +28,7 @@ export const Task = ({ task }) => {
 
   const handleToggle = () => {
     axios
-      .put("http://pics-io.vercel.app/api/message/update", {
+      .put("/api/message/update", {
         data: {
           id: task.id,
           body: task.text,

@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "main": "index.js",
+  "proxy": "http://localhost:3030",
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.7",
     "@testing-library/jest-dom": "^5.11.9",

@@ -13,7 +13,7 @@ export const TaskForm = () => {
     const form = event.target;
     const id = uuid();
     axios
-      .post("http://pics-io.vercel.app/api/message/create", {
+      .post("/api/message/create", {
         body: form.elements.text.value,
         id,
       })

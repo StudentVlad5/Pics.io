@@ -24,7 +24,7 @@ export const TaskList = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     axios
-      .get("http://pics-io.vercel.app/api/message")
+      .get("/api/message")
       .then(function (response) {
         // handle success
         setTasksInitialState(response);
