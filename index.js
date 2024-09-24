@@ -12,11 +12,7 @@ app.use(cors());
 
 
 app.use(express.json({ extended: true }));
-app.use('/api/auth', require('./routes/auth.routes'));
-app.use('/api/cart', require('./routes/cart.router'))
-app.use('/api/tire-crud', require('./routes/tire-crud.router'))
-app.use('/api/brand-crud', require('./routes/brand-crud.router'))
-app.use('/api/user-crud', require('./routes/user-crud.router'))
+app.use('/api/message', require('./routes/message.router'));
 
 const PORT = process.env.port.toString();
 const mongoUri = process.env.mongoUri.toString()
