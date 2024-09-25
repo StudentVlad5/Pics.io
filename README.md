@@ -15,7 +15,7 @@
 - Loading messages in the numbered task view
 - Viewing the list of messages
 - Add your own message, mark the task as completed, delete the message
-- ability to filter messages
+- Ability to filter messages
 
 ## Installation
 
