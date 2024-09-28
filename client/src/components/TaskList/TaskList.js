@@ -26,12 +26,10 @@ export const TaskList = () => {
     axios
       .get("/api/message")
       .then(function (response) {
-        // handle success
         setTasksInitialState(response);
         dispatch(addListOfTasks([...response.data]));
       })
       .catch(function (error) {
-        // handle error
         console.log(error);
       })
       .finally();
