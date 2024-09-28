@@ -2,50 +2,44 @@ import { useDispatch } from "react-redux";
 import { ReactComponent as MdClose } from "../../img/icons8-close.svg";
 import { deleteTask, toggleCompleted } from "../../redux/tasksSlice";
 import css from "./Task.module.css";
-import axios from "axios";
+// import axios from "axios";
 
 export const Task = ({ task }) => {
   const dispatch = useDispatch();
 
   const handleDelete = () => {
-    axios
-      .delete("/api/message/delete", {
-        data: {
-          id: task.id,
-        },
-      })
-      .then(function (response) {
-        // handle success
+    // axios
+    //   .delete("/api/message/delete", {
+    //     data: {
+    //       id: task.id,
+    //     },
+    //   })
+    //   .then(function (response) {
         dispatch(deleteTask(task.id));
-      })
-      .catch(function (error) {
-        // handle error
-      })
-      .finally(function () {
-        // always executed
-      });
+    //   })
+    //   .catch(function (error) {
+    //   })
+    //   .finally(function () {
+    //   });
   };
 
   const handleToggle = () => {
-    axios
-      .put("/api/message/update", {
-        data: {
-          id: task.id,
-          body: task.text,
-          completed: !task.completed,
-        },
-      })
-      .then(function (response) {
-        // handle success
+    // axios
+    //   .put("/api/message/update", {
+    //     data: {
+    //       id: task.id,
+    //       body: task.text,
+    //       completed: !task.completed,
+    //     },
+    //   })
+    //   .then(function (response) {
         dispatch(toggleCompleted(task.id));
-      })
-      .catch(function (error) {
-        // handle error
-        console.log(error);
-      })
-      .finally(function () {
-        // always executed
-      });
+    //   })
+    //   .catch(function (error) {
+    //     console.log(error);
+    //   })
+    //   .finally(function () {
+    //   });
   };
 
   return (
