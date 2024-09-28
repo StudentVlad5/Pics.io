@@ -12,6 +12,19 @@ export const TaskForm = () => {
     event.preventDefault();
     const form = event.target;
     const id = uuid();
+    // axios
+    //   .post("/api/message/create", {
+    //     body: form.elements.text.value,
+    //     id,
+    //   })
+    //   .then(function (response) {
+    //   })
+    //   .catch(function (error) {
+    //     console.log(error);
+    //   })
+    //   .finally(function () {
+    //   });
+
     dispatch(
       addTask(form.elements.text.value, id, false)
     );

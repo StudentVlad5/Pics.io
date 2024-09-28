@@ -8,11 +8,38 @@ export const Task = ({ task }) => {
   const dispatch = useDispatch();
 
   const handleDelete = () => {
+    // axios
+    //   .delete("/api/message/delete", {
+    //     data: {
+    //       id: task.id,
+    //     },
+    //   })
+    //   .then(function (response) {
         dispatch(deleteTask(task.id));
+    //   })
+    //   .catch(function (error) {
+    //   })
+    //   .finally(function () {
+    //   });
   };
 
   const handleToggle = () => {
+    // axios
+    //   .put("/api/message/update", {
+    //     data: {
+    //       id: task.id,
+    //       body: task.text,
+    //       completed: !task.completed,
+    //     },
+    //   })
+    //   .then(function (response) {
         dispatch(toggleCompleted(task.id));
+    //   })
+    //   .catch(function (error) {
+    //     console.log(error);
+    //   })
+    //   .finally(function () {
+    //   });
   };
 
   return (
