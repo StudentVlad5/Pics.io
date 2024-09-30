@@ -33,8 +33,7 @@ export const TaskList = () => {
         console.log(error);
       })
       .finally();
-  }, []);
-  // }, [dispatch]);
+  }, [dispatch]);
 
   const tasks = useSelector(getTasks);
   const statusFilter = useSelector(getStatusFilter);

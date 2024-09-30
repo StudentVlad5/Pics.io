@@ -3,7 +3,7 @@ import { v4 as uuid } from "uuid";
 import { addTask } from "../../redux/tasksSlice";
 import css from "./TaskForm.module.css";
 import { Button } from "../Button/Button";
-// import axios from "axios";
+import axios from "axios";
 
 export const TaskForm = () => {
   const dispatch = useDispatch();
@@ -12,18 +12,18 @@ export const TaskForm = () => {
     event.preventDefault();
     const form = event.target;
     const id = uuid();
-    // axios
-    //   .post("/api/message/create", {
-    //     body: form.elements.text.value,
-    //     id,
-    //   })
-    //   .then(function (response) {
-    //   })
-    //   .catch(function (error) {
-    //     console.log(error);
-    //   })
-    //   .finally(function () {
-    //   });
+    axios
+      .post("/api/message/create", {
+        body: form.elements.text.value,
+        id,
+      })
+      .then(function (response) {
+      })
+      .catch(function (error) {
+        console.log(error);
+      })
+      .finally(function () {
+      });
 
     dispatch(
       addTask(form.elements.text.value, id, false)
